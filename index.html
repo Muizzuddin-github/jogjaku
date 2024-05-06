@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" id="beranda">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +36,7 @@
     <script src="/script.js" async></script>
   </head>
   <body class="font-quicksand">
-    <nav class="bg-white border-gray-200">
+    <nav class="bg-white border-gray-200 fixed top-0 w-full z-10">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -82,7 +82,7 @@
           >
             <li>
               <a
-                href="#"
+                href="#beranda"
                 class="menu block py-1 text-myTextColor relative before:absolute before:h-1 before:w-full before:bg-myBorderColor before:top-7 before:rounded-md w-fit font-semibold hover:before:bg-myBorderColor"
                 aria-current="page"
                 >Beranda</a
@@ -90,28 +90,28 @@
             </li>
             <li>
               <a
-                href="#"
+                href="#oleh-oleh"
                 class="menu block py-1 text-myTextColor relative before:absolute before:h-1 before:w-full before:top-7 before:rounded-md hover:before:bg-myBorderColor w-fit"
                 >Pusat oleh-oleh</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#promo"
                 class="menu block py-1 text-myTextColor relative before:absolute before:h-1 before:w-full before:top-7 before:rounded-md hover:before:bg-myBorderColor w-fit"
                 >Promo</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="menu block py-1 text-myTextColor relative before:absolute before:h-1 before:w-full before:top-7 before:rounded-md hover:before:bg-myBorderColor w-fit"
+                href="#testimoni"
+                class="menu block py-1 text-myTextColor relative before:absolute before:h-1 before:w-full before:top-7 before:rounded-md hover:before:bg-myBorderColor w-fit mb-10 md:mb-0"
                 >Testimoni</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#kontak"
                 class="block text-myTextColor w-fit bg-myBorderColor px-4 py-2 rounded-t-3xl rounded-b-xl"
                 >Kontak kami</a
               >
@@ -121,7 +121,7 @@
       </div>
     </nav>
     <header
-      class="p-4 mt-3 md:flex md:justify-between md:mt-16 md:items-center lg:px-36 lg:py-14"
+      class="p-4 mt-16 md:flex md:justify-between md:mt-20 md:items-center lg:px-36 lg:pt-28 lg:pb-14"
     >
       <section>
         <h1 class="text-3xl font-bold text-hitamku lg:text-[46px]">
@@ -152,7 +152,10 @@
     </header>
 
     <main>
-      <section class="p-4 mt-16 lg:px-36 lg:py-14">
+      <section
+        id="oleh-oleh"
+        class="px-4 py-20 mt-16 md:py-16 lg:px-36 lg:py-20"
+      >
         <h2
           class="text-center text-3xl lg:text-[32px] text-myTextColor font-semibold"
         >
@@ -243,13 +246,13 @@
       </section>
 
       <section
-        id="layanan"
+        id="promo"
         class="p-4 md:flex md:justify-between md:gap-8 md:pt-20 lg:px-40 lg:justify-center lg:gap-32"
       >
         <img src="./img/pic.png" alt="" class="w-full rounded-2xl md:w-80" />
         <section class="mt-8">
           <h2
-            class="font-bold text-3xl lg:text-[46px] max-w-[40rem] leading-[3.5rem]"
+            class="font-bold text-3xl lg:text-[46px] max-w-[40rem] lg:leading-[3.5rem]"
           >
             Promo Spesial! Dapatkan Diskon Up To 50% untuk Berbagai Oleh-Oleh
             Jogja
@@ -267,7 +270,7 @@
         </section>
       </section>
 
-      <section class="p-4 mt-16 lg:px-36 lg:py-14">
+      <section id="testimoni" class="p-4 mt-16 lg:px-36 lg:py-14">
         <p class="text-3xl lg:text-[36px] max-w-[40rem] text-center m-auto">
           Puas banget belanja oleh-oleh di sini! Lengkap, murah, pelayanannya
           ramah, Surga bagi pecinta oleh-oleh dan banyak oleh-oleh khas Jogja
@@ -285,6 +288,7 @@
     </main>
 
     <footer
+      id="kontak"
       class="p-4 flex flex-col gap-5 items-start border lg:px-40 lg:py-10 md:flex-row md:gap-0 md:justify-between md:items-center"
     >
       <section class="flex">
