@@ -148,17 +148,6 @@ jenisOlehOleh.addEventListener("click", function (e) {
 
 // navbar
 const listMenu = document.querySelectorAll(".menu");
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("menu")) {
-    for (let i = 0; i < listMenu.length; i++) {
-      if (listMenu[i].textContent === e.target.textContent) {
-        listMenu[i].classList.add("before:bg-myBorderColor");
-      } else {
-        listMenu[i].classList.remove("before:bg-myBorderColor");
-      }
-    }
-  }
-});
 
 const menuContent = document.querySelectorAll(".menu-content");
 window.addEventListener("scroll", function () {
