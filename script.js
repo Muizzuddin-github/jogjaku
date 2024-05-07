@@ -147,10 +147,9 @@ jenisOlehOleh.addEventListener("click", function (e) {
 });
 
 // navbar
-
+const listMenu = document.querySelectorAll(".menu");
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("menu")) {
-    const listMenu = document.querySelectorAll(".menu");
     for (let i = 0; i < listMenu.length; i++) {
       if (listMenu[i].textContent === e.target.textContent) {
         listMenu[i].classList.add("before:bg-myBorderColor");
@@ -159,4 +158,25 @@ document.addEventListener("click", function (e) {
       }
     }
   }
+});
+
+const menuContent = document.querySelectorAll(".menu-content");
+window.addEventListener("scroll", function () {
+  menuContent.forEach((m) => {
+    let top = window.scrollY + this.document.querySelector("nav").offsetHeight;
+    let offset = m.offsetTop;
+    let height = m.offsetHeight;
+    let id = "#" + m.getAttribute("id");
+    let idValid = id === "#null" ? "#beranda" : id;
+
+    if (top >= offset && top < offset + height) {
+      for (let i = 0; i < listMenu.length; i++) {
+        if (listMenu[i].getAttribute("href") === idValid) {
+          listMenu[i].classList.add("before:bg-myBorderColor");
+        } else {
+          listMenu[i].classList.remove("before:bg-myBorderColor");
+        }
+      }
+    }
+  });
 });
